@@ -11,11 +11,9 @@ $ npm install --save reactstrap react react-dom
 $ yarn start
 ```
 
-
-
 ## Set Up
 
-#### Delete unneccessary
+#### Delete unnecessary files
 - React logos, images
 - CSS, etc.
 
@@ -36,6 +34,8 @@ $ yarn start
 - description
 
 #### Import mock data and add to state
+`import mockData from './mockData';`
+
 ```js
 this.state = {
   allHeroes: mockData
@@ -48,7 +48,7 @@ this.state = {
 #### App Header
 - use Reactstrap to create header
 - include app name and description
-- import to src/App.js `import Header from './components/Header';`
+- `import Header from './components/Header';` to src/App.js
 
 #### Index and Show files
 - create HeroIndex component
