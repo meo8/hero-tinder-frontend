@@ -44,11 +44,50 @@ this.state = {
 
 #### App Header
 - use Reactstrap to create header
-- what should header contain?
+- include app name and description
 
 #### Index and Show files
 - create HeroIndex component
 - create HeroShow component
+
+## Set Up Enzyme & Test Environment
+
+#### Download Enzyme
+`$ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16`
+
+#### Create test directory
+`src/pages/__test__`
+
+#### Create test files
+
+HeroIndex
+
+`src/pages/__test__/HeroIndex.js`
+
+#### Import dependencies and files
+Import in `src/pages/__test__/HeroIndex.js`.
+
+```
+import React from 'react'
+import ReactDOM from 'react-dom'
+import Enzyme, { mount } from 'enzyme'
+import Adapter from 'enzyme-adapter-react-16'
+import CatIndex from '../CatIndex'
+
+Enzyme.configure({ adapter: new Adapter() })
+```
+#### Add tests in App.test.js file
+example:
+```
+it('HeroIndex renders without crashing', () => {
+  const div = document.createElement('div')
+  ReactDOM.render(<HeroIndex />, div)
+})
+```
+
+#### Start test in terminal
+
+`yarn test`
 
 ## User and Developer Stories
 1. As a user we can see the header and a list of all the heroes
