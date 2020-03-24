@@ -32,7 +32,23 @@ $ yarn start
 - super power
 - description
 
+#### Import mock data and add to state
+```js
+this.state = {
+  allHeroes: mockData
+}
+```
 
+
+## UI
+
+#### App Header
+- use Reactstrap to create header
+- what should header contain?
+
+#### Index and Show files
+- create HeroIndex component
+- create HeroShow component
 
 ## User and Developer Stories
 1. As a user we can see the header and a list of all the heroes

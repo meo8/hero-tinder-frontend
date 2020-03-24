@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
+import mockData from './mockData';
 
 class App extends Component {
   constructor() {
     super()
-    this.state = {}
+    this.state = {
+      allHeroes: mockData
+    }
   }
 
   render() {
-    return ();
+    return (
+      <>
+
+      </>
+    );
   }
 }
 
