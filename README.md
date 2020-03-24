@@ -14,64 +14,75 @@ $ yarn start
 ## Set Up
 
 #### Delete unnecessary files
+
 - React logos, images
 - CSS, etc.
 
 #### Import boostrap css to index.js
+
 `import 'bootstrap/dist/css/bootstrap.min.css'`
 
 #### Import React Router to src/App.js
+
 `import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'`
 
 #### Create directories in src
+
 - pages
 - components
 
 #### Create mock data
+
 - name
 - age
 - super power
 - description
 
 #### Import mock data and add to state
+
 `import mockData from './mockData';`
 
 ```js
 this.state = {
   allHeroes: mockData
-}
+};
 ```
-
 
 ## UI
 
 #### App Header
+
 - use Reactstrap to create header
 - include app name and description
 - `import Header from './components/Header';` to src/App.js
 
 #### Index and Show files
+
 - create HeroIndex component
 - create HeroShow component
 - import to src/App.js
 
-
 ## Set Up Enzyme & Test Environment
 
+#### Delete App.test.js file in src
+
 #### Download Enzyme
+
 `$ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16`
 
 #### Create test directory
-`src/pages/__test__`
+
+`src/pages/__tests__`
 
 #### Create test files
 
 HeroIndex
 
-`src/pages/__test__/HeroIndex.js`
+`src/pages/__tests__/HeroIndex.js`
 
 #### Import dependencies and files
-Import in `src/pages/__test__/HeroIndex.js`.
+
+Import in `src/pages/__tests__/HeroIndex.js`.
 
 ```
 import React from 'react'
@@ -82,8 +93,11 @@ import CatIndex from '../CatIndex'
 
 Enzyme.configure({ adapter: new Adapter() })
 ```
-#### Add tests in App.test.js file
+
+#### Add tests in `src/pages/__tests__` files
+
 example:
+
 ```
 it('HeroIndex renders without crashing', () => {
   const div = document.createElement('div')
@@ -96,9 +110,13 @@ it('HeroIndex renders without crashing', () => {
 `yarn test`
 
 ## User and Developer Stories
+
 1. As a user we can see the header and a list of all the heroes
-  - As a developer, we need to create a header component
-  - As a developer, we need to create a hero index to list all heroes
+
+- As a developer, we need to create a header component
+- As a developer, we need to create a hero index to list all heroes
+
 2. As a user I can click on a hero profile
-  - As a developer I can turn each list to a link
-  - As a developer I can create a hero show component
+
+- As a developer I can turn each list to a link
+- As a developer I can create a hero show component
