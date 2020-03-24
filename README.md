@@ -22,6 +22,9 @@ $ yarn start
 #### Import boostrap css to index.js
 `import 'bootstrap/dist/css/bootstrap.min.css'`
 
+#### Import React Router to src/App.js
+`import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'`
+
 #### Create directories in src
 - pages
 - components
@@ -45,10 +48,13 @@ this.state = {
 #### App Header
 - use Reactstrap to create header
 - include app name and description
+- import to src/App.js `import Header from './components/Header';`
 
 #### Index and Show files
 - create HeroIndex component
 - create HeroShow component
+- import to src/App.js
+
 
 ## Set Up Enzyme & Test Environment
 

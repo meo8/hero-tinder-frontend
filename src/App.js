@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
+import HeroIndex from './pages/HeroIndex.js';w
 import mockData from './mockData';
 
 class App extends Component {
@@ -14,6 +15,13 @@ class App extends Component {
     return (
       <>
         <Header />
+
+        <Router>
+          <Switch>
+            <Route exact path="/hero/:id" component={ HeroShow } />
+            <Route exact path="/" component={ HeroIndex } />
+          </Switch>
+        </Router>
       </>
     );
   }
