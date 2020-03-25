@@ -15,16 +15,16 @@ class App extends Component {
 
   render() {
     return (
-      <>
+      <React.Fragment>
         <Header />
 
         <Router>
           <Switch>
-            <Route exact path="/hero/:id" component={HeroShow} />
-            <Route exact path="/" render={(props) => <HeroIndex heroes={this.state.allHeroes} />}/>
+            <Route exact path="/hero/:id" render={(props) => <HeroShow {...this.props} {...props} heroes={this.state.allHeroes} /> } />
+            <Route exact path="/" render={(props) => <HeroIndex heroes={this.state.allHeroes} /> } />
           </Switch>
         </Router>
-      </>
+      </React.Fragment>
     );
   }
 }
