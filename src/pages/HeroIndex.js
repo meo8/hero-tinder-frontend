@@ -6,16 +6,16 @@ const HeroIndex = (props) => {
     <Row>
       {props.heroes.map((hero, index) => {
         return (
-          <Col sm="4">
-            <Card body key={index}>
+          <Col sm="4" key={index}>
+            <Card body>
               <CardTitle>{hero.name}</CardTitle>
               <CardText>{hero.description}</CardText>
-              <Button>Go somewhere</Button>
+              <Button>Learn More</Button>
             </Card>
           </Col>
         )
       })}
-    
+
     </Row>
   );
 }
