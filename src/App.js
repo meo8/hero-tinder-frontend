@@ -21,7 +21,7 @@ class App extends Component {
         <Router>
           <Switch>
             <Route exact path="/hero/:id" component={HeroShow} />
-            <Route exact path="/" component={HeroIndex} />
+            <Route exact path="/" render={(props) => <HeroIndex heroes={this.state.allHeroes} />}/>
           </Switch>
         </Router>
       </>

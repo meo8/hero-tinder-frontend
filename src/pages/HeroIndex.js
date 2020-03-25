@@ -1,23 +1,21 @@
 import React from 'react';
 import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
 
-const HeroIndex = () => {
+const HeroIndex = (props) => {
   return (
     <Row>
-      <Col sm="6">
-        <Card body>
-          <CardTitle>Special Title Treatment</CardTitle>
-          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-          <Button>Go somewhere</Button>
-        </Card>
-      </Col>
-      <Col sm="6">
-        <Card body>
-          <CardTitle>Special Title Treatment</CardTitle>
-          <CardText>With supporting text below as a natural lead-in to additional content.</CardText>
-          <Button>Go somewhere</Button>
-        </Card>
-      </Col>
+      {props.heroes.map((hero, index) => {
+        return (
+          <Col sm="4">
+            <Card body key={index}>
+              <CardTitle>{hero.name}</CardTitle>
+              <CardText>{hero.description}</CardText>
+              <Button>Go somewhere</Button>
+            </Card>
+          </Col>
+        )
+      })}
+    
     </Row>
   );
 }
