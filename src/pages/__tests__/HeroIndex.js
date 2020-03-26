@@ -12,8 +12,10 @@ it('HeroIndex renders without crashing', () => {
   ReactDOM.render(<HeroIndex heroes={ mockHeroes }/>, div)
 })
 
-it('Renders the heroes', ()=> {
+it('Renders the heroes', () => {
   const component = mount(<HeroIndex heroes={ mockHeroes }/>)
-  const headings = component.find('CardTitle')
-  expect(headings.length).toBe(5)
+  const cardTitle = component.find('CardTitle')
+  // in the HeroIndex component, there are 5 total CardTitle components
+  // 5 because there are 5 objects in the array that's iterated through
+  expect(cardTitle.length).toBe(5)
 })
