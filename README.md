@@ -11,6 +11,7 @@ $ npm install --save reactstrap react react-dom
 $ yarn start
 ```
 
+
 ## Set Up
 
 #### Delete unnecessary files
@@ -48,6 +49,7 @@ this.state = {
 };
 ```
 
+
 ## UI
 
 #### App Header
@@ -58,9 +60,11 @@ this.state = {
 
 #### Index and Show files
 
-- create HeroIndex component
-- create HeroShow component
+- create HeroIndex pages
+- create HeroShow pages
+- create NewHero pages
 - import to src/App.js
+
 
 ## Set Up Enzyme & Test Environment
 
@@ -76,7 +80,9 @@ this.state = {
 
 #### Create test files
 
-HeroIndex
+- HeroIndex
+- HeroShow
+- NewHero
 
 `src/pages/__tests__/HeroIndex.js`
 
@@ -109,14 +115,16 @@ it('HeroIndex renders without crashing', () => {
 
 `yarn test`
 
+
 ## User and Developer Stories
 
-1. As a user we can see the header and a list of all the heroes
+1. As a user, I can see the header and a list of all the heroes.
+  - As a developer, I need to create a header component.
+  - As a developer, I need to create a hero index to list all heroes.
 
-- As a developer, we need to create a header component
-- As a developer, we need to create a hero index to list all heroes
+2. As a user, I can click on a hero profile.
+  - As a developer, I can turn each list to a link.
+  - As a developer, I can create a hero show component.
 
-2. As a user I can click on a hero profile
-
-- As a developer I can turn each list to a link
-- As a developer I can create a hero show component
+3. As a user, I can create a new hero on the home page.
+   - As a developer, I need a NewHero page that shows a form with a submit button.
