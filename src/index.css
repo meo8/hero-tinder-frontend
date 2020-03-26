@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#cancelBtn {
+  margin-right: 15px;
+}
+
+#newHeroBtn {
+  position: absolute;
+  top: 384px;
+  left: 15px;
+}
+
+.col-sm-5 {
+  margin: 10px;
+}
+
+.container {
+  margin-top: 40px;
+}
+
+.row {
+  justify-content: center;
+}

@@ -28,6 +28,12 @@ const mockData = [
     name: 'Batman',
     superPower: 'Too rich',
     description: 'Wanna ride in my bat mobile?'
+  },
+  {
+    id: 6,
+    name: 'Doctor Strange',
+    superPower: 'Time operator',
+    description: 'You\'re one in a million.'
   }
 ]
 
