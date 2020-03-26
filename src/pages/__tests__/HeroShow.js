@@ -11,9 +11,3 @@ it('HeroShow renders without crashing', () => {
   const div = document.createElement('div')
   ReactDOM.render(<HeroShow heroes={ mockHeroes } match={{params: {id: 1}}}/>, div)
 })
-
-// it('Renders the heroes', ()=> {
-//   const component = mount(<HeroIndex heroes={ mockHeroes }/>)
-//   const headings = component.find('CardTitle')
-//   expect(headings.length).toBe(5)
-// })

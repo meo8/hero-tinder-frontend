@@ -16,9 +16,8 @@ const HeroIndex = (props) => {
               </Router>
             </Card>
           </Col>
-        )
+        );
       })}
-
     </Row>
   );
 }
