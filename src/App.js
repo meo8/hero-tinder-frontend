@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import HeroIndex from "./pages/HeroIndex";
 import HeroShow from "./pages/HeroShow";
+import NewHero from "./pages/NewHero";
 import mockData from "./mockData";
 
 class App extends Component {
@@ -16,10 +17,10 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Header />
-
         <Router>
+          <Header />
           <Switch>
+            <Route exact path="/hero/new" render={(props) => <NewHero />} />
             <Route exact path="/hero/:id" render={(props) => <HeroShow {...this.props} {...props} heroes={this.state.allHeroes} /> } />
             <Route exact path="/" render={(props) => <HeroIndex heroes={this.state.allHeroes} /> } />
           </Switch>

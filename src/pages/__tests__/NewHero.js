@@ -32,5 +32,5 @@ it('has super power input', ()=>{
 it('has a submit button', ()=>{
   const component = mount(<NewHero />)
   // looks for an id of submit on the button
-  expect(component.find('button#submit').text()).toBe("Add New Hero")
+  expect(component.find('button#submit').text()).toBe("Submit")
 })
