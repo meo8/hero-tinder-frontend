@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Form, FormGroup, Label, Input, Button, Container } from 'reactstrap';
 
 class NewHero extends Component {
@@ -13,12 +13,19 @@ class NewHero extends Component {
         description: ''
       }
     }
+    this.baseState = this.state
   }
 
   handleChange = (e) => {
+    e.preventDefault();
     let { form } = this.state;
     form[e.target.name] = e.target.value;
     this.setState({form: form});
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.sendForm(this.state.form);
   }
 
   render() {
@@ -62,11 +69,8 @@ class NewHero extends Component {
             />
           </FormGroup>
 
-          <Router>
-            <Link to="/"><Button id="cancelBtn">Cancel</Button></Link>
-          </Router>
-
-          <Button id="submit">Submit</Button>
+          <Link to="/"><Button id="cancelBtn">Cancel</Button></Link>
+          <Button id="submit" type="submit" onClick={this.handleSubmit}>Submit</Button>
 
         </Form>
       </Container>

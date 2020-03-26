@@ -1,12 +1,12 @@
 import React from 'react';
 import { Card, Button, CardTitle, CardText, Row, Col, Container } from 'reactstrap';
-import {BrowserRouter as Router, Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const HeroIndex = (props) => {
   return (
-    <Router>
-      <Link to="/new"><Button id="newHeroBtn">Add New Hero</Button></Link>
+
       <Container>
+        <Link to="/new"><Button id="newHeroBtn">Add New Hero</Button></Link>
         <Row>
           {props.heroes.map((hero, index) => {
             return (
@@ -21,7 +21,7 @@ const HeroIndex = (props) => {
           })}
         </Row>
       </Container>
-    </Router>
+
   );
 }
 

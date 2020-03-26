@@ -18,7 +18,7 @@ code {
 
 #newHeroBtn {
   position: absolute;
-  top: 384px;
+  top: 355px;
   left: 15px;
 }
 
@@ -28,6 +28,7 @@ code {
 
 .container {
   margin-top: 40px;
+  margin-bottom: 20%;
 }
 
 .row {

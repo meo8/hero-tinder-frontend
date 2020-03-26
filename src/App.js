@@ -15,15 +15,32 @@ class App extends Component {
     };
   }
 
+  retrieveForm = (form) => {
+    console.log(form)
+  }
+
   render() {
     return (
       <React.Fragment>
         <Router>
           <Header />
           <Switch>
-            <Route exact path="/hero/:id" render={(props) => <HeroShow {...this.props} {...props} heroes={this.state.allHeroes} /> } />
-            <Route exact path="/new" render={(props) => <NewHero />} />
-            <Route exact path="/" render={(props) => <HeroIndex heroes={this.state.allHeroes} /> } />
+            <Route
+              path="/hero/:id"
+              render={(props) => <HeroShow {...props}
+              heroes={this.state.allHeroes}/>}
+            />
+            <Route
+              path="/new"
+              render={(props) => <NewHero
+              sendForm={this.retrieveForm} />}
+            />
+            <Route
+              exact
+              path="/"
+              render={(props) => <HeroIndex
+              heroes={this.state.allHeroes} />}
+            />
           </Switch>
         </Router>
       </React.Fragment>
