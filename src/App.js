@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import './App.css'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import HeroIndex from "./pages/HeroIndex";
 import HeroShow from "./pages/HeroShow";
@@ -22,7 +22,6 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <Router>
           <Header />
           <Switch>
             <Route
@@ -42,7 +41,6 @@ class App extends Component {
               heroes={this.state.allHeroes} />}
             />
           </Switch>
-        </Router>
       </React.Fragment>
     );
   }
